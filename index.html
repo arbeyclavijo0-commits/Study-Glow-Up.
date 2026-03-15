@@ -1,8 +1,11 @@
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Study Glow Up</title>
 
 <style>
@@ -10,144 +13,116 @@
 body{
 margin:0;
 font-family:Arial;
-background-image:url("xd.jpg");
+background:url("xd.jpg");
 background-size:cover;
 background-attachment:fixed;
-color:white;
 }
 
-/* barra superior */
-
-nav{
+header{
+background:#ff8fb1;
+color:white;
+padding:20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 40px;
-background:rgba(0,0,0,0.8);
+flex-wrap:wrap;
 }
 
-nav ul{
-display:flex;
-list-style:none;
-margin:0;
-padding:0;
+header img{
+height:70px;
 }
 
-nav ul li{
-margin-left:25px;
-}
-
-nav ul li a{
+nav a{
 color:white;
 text-decoration:none;
-font-size:18px;
+margin:15px;
+font-weight:bold;
 }
 
-nav ul li a:hover{
-color:#ffd700;
+#contadorCarrito{
+background:white;
+color:#ff8fb1;
+padding:8px 15px;
+border-radius:20px;
+font-weight:bold;
 }
 
-.logo{
-width:60px;
-}
-
-/* portada */
-
-.portada{
+.hero{
 text-align:center;
-padding:120px 20px;
+padding:100px 20px;
+color:white;
+background:rgba(0,0,0,0.4);
 }
 
-.portada h1{
-font-size:60px;
-margin-bottom:10px;
+.hero h1{
+font-size:50px;
 }
 
-.portada p{
-font-size:20px;
+section{
+padding:60px 20px;
 }
-
-/* secciones */
-
-.seccion{
-padding:80px 15%;
-background:rgba(0,0,0,0.6);
-margin-top:40px;
-}
-
-.seccion h2{
-text-align:center;
-font-size:40px;
-margin-bottom:30px;
-}
-
-/* productos */
 
 .productos{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .producto{
-width:250px;
-text-align:center;
 background:white;
-color:black;
-padding:15px;
-border-radius:10px;
-}
-
-.producto button{
-margin-top:10px;
-padding:10px;
-border:none;
-background:#ffd700;
-cursor:pointer;
-border-radius:5px;
-font-weight:bold;
-}
-
-.producto button:hover{
-background:black;
-color:white;
-}
-
-.boton{
-display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:#ffd700;
-color:black;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-}
-
-.boton:hover{
-background:white;
-}
-
-/* carrito */
-
-#carrito{
-background:white;
-color:black;
 padding:20px;
 border-radius:10px;
-max-width:400px;
-margin:auto;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+text-align:center;
+transition:0.3s;
 }
 
-#carrito button{
-margin-top:10px;
-padding:10px;
+.producto:hover{
+transform:scale(1.05);
+}
+
+button{
+background:#ff8fb1;
 border:none;
-background:green;
+padding:10px 20px;
 color:white;
+border-radius:20px;
 cursor:pointer;
-border-radius:5px;
+}
+
+button:hover{
+background:#ff6c9a;
+}
+
+input{
+padding:10px;
+width:250px;
+border-radius:20px;
+border:1px solid #ccc;
+margin-bottom:20px;
+}
+
+.carrito{
+position:fixed;
+right:20px;
+top:120px;
+background:white;
+padding:20px;
+width:250px;
+box-shadow:0 0 10px rgba(0,0,0,0.3);
+border-radius:10px;
+}
+
+.piel{
+text-align:center;
+background:#ffe4ec;
+}
+
+footer{
+background:#ff8fb1;
+color:white;
+text-align:center;
+padding:20px;
 }
 
 </style>
@@ -155,173 +130,226 @@ border-radius:5px;
 
 <body>
 
+<header>
+
+<img src="logo.jpeg">
+
 <nav>
 
-<img src="logo.jpeg" class="logo">
-
-<ul>
-<li><a href="#">Inicio</a></li>
-<li><a href="catalogo.pdf" target="_blank">Catálogo</a></li>
-<li><a href="#nosotros">Nosotros</a></li>
-<li><a href="#productos">Productos</a></li>
-</ul>
+<a href="#destacados">Destacados</a>
+<a href="#productos">Productos</a>
+<a href="catalogo.pdf" target="_blank">Catálogo</a>
+<a href="#piel">Tipo de piel</a>
 
 </nav>
 
-<div class="portada">
+<div id="contadorCarrito">🛒 0</div>
+
+</header>
+
+<section class="hero">
 
 <h1>Study Glow Up</h1>
 
 <p>La belleza comienza desde el interior</p>
 
-<a href="catalogo.pdf" target="_blank" class="boton">Ver Catálogo</a>
+<p>Ayudamos a mejorar la autoestima de personas con acné</p>
 
-</div>
+</section>
 
-<div class="seccion" id="nosotros">
+<section id="destacados">
 
-<h2>Sobre Nosotros</h2>
-
-<p>
-Study Glow Up S.A.S es una empresa dedicada a la comercialización de productos
-para el cuidado de la piel. Nuestro objetivo es ayudar a las personas a mejorar
-su autoestima y confianza mediante productos de calidad.
-</p>
-
-<p>
-Nuestra misión es mejorar la autoestima del 80% de las personas en Colombia
-que sufren de acné, ofreciendo productos efectivos y asesoría estética.
-</p>
-
-<p>
-A futuro aspiramos ser reconocidos a nivel nacional por nuestros productos
-y por la ayuda que brindamos a las personas que desean mejorar su piel.
-</p>
-
-</div>
-
-<div class="seccion" id="productos">
-
-<h2>Nuestros Kits</h2>
+<h2>Productos Destacados</h2>
 
 <div class="productos">
 
 <div class="producto">
-<h3>Kit Welcome 2025 Rosas</h3>
+<h3>Kit Welcome Rosas</h3>
 <p>$29.990</p>
-<button onclick="agregar('Kit Welcome Rosas',29990)">Agregar al carrito</button>
+<button onclick="agregar('Kit Welcome Rosas',29990)">Agregar</button>
 </div>
 
 <div class="producto">
-<h3>Kit Welcome 2025 Centella</h3>
-<p>$29.990</p>
-<button onclick="agregar('Kit Welcome Centella',29990)">Agregar al carrito</button>
-</div>
-
-<div class="producto">
-<h3>Kit Welcome 2025 Vitamina C</h3>
-<p>$29.990</p>
-<button onclick="agregar('Kit Welcome Vitamina C',29990)">Agregar al carrito</button>
-</div>
-
-<div class="producto">
-<h3>Kit Premium Rosas</h3>
+<h3>Premium Rosas</h3>
 <p>$50.000</p>
-<button onclick="agregar('Kit Premium Rosas',50000)">Agregar al carrito</button>
+<button onclick="agregar('Premium Rosas',50000)">Agregar</button>
+</div>
+
+</div>
+
+</section>
+
+<section id="productos">
+
+<h2>Nuestros Kits</h2>
+
+<input type="text" id="buscador" placeholder="Buscar producto..." onkeyup="buscarProducto()">
+
+<div class="productos">
+
+<div class="producto">
+<h3>Kit Welcome Rosas</h3>
+<p>$29.990</p>
+<button onclick="agregar('Kit Welcome Rosas',29990)">Agregar</button>
 </div>
 
 <div class="producto">
-<h3>Kit Premium Centella</h3>
+<h3>Kit Welcome Centella</h3>
+<p>$29.990</p>
+<button onclick="agregar('Kit Welcome Centella',29990)">Agregar</button>
+</div>
+
+<div class="producto">
+<h3>Kit Welcome Vitamina C</h3>
+<p>$29.990</p>
+<button onclick="agregar('Kit Welcome Vitamina C',29990)">Agregar</button>
+</div>
+
+<div class="producto">
+<h3>Premium Rosas</h3>
 <p>$50.000</p>
-<button onclick="agregar('Kit Premium Centella',50000)">Agregar al carrito</button>
+<button onclick="agregar('Premium Rosas',50000)">Agregar</button>
+</div>
+
+<div class="producto">
+<h3>Premium Centella</h3>
+<p>$50.000</p>
+<button onclick="agregar('Premium Centella',50000)">Agregar</button>
 </div>
 
 <div class="producto">
 <h3>Kit Parejas Rosas</h3>
 <p>$40.000</p>
-<button onclick="agregar('Kit Parejas Rosas',40000)">Agregar al carrito</button>
+<button onclick="agregar('Kit Parejas Rosas',40000)">Agregar</button>
 </div>
 
 <div class="producto">
-<h3>Kit Pestañas Negra</h3>
+<h3>Kit Pestañas Negro</h3>
 <p>$30.000</p>
-<button onclick="agregar('Kit Pestañas Negra',30000)">Agregar al carrito</button>
+<button onclick="agregar('Kit Pestañas Negro',30000)">Agregar</button>
 </div>
 
 <div class="producto">
 <h3>Kit Pestañas Transparente</h3>
 <p>$30.000</p>
-<button onclick="agregar('Kit Pestañas Transparente',30000)">Agregar al carrito</button>
+<button onclick="agregar('Kit Pestañas Transparente',30000)">Agregar</button>
 </div>
 
 <div class="producto">
-<h3>Kit Pieles Grasas Centella</h3>
+<h3>Kit Piel Grasa Centella</h3>
 <p>$30.000</p>
-<button onclick="agregar('Kit Pieles Grasas Centella',30000)">Agregar al carrito</button>
+<button onclick="agregar('Kit Piel Grasa Centella',30000)">Agregar</button>
 </div>
 
 </div>
 
-</div>
+</section>
 
-<div class="seccion">
+<section id="piel" class="piel">
 
-<h2>Carrito</h2>
+<h2>Identifica tu tipo de piel</h2>
 
-<div id="carrito">
+<p>¿Cómo se siente tu piel después de lavarla?</p>
 
-<ul id="lista-carrito"></ul>
+<button onclick="resultado('seca')">Tirante</button>
+<button onclick="resultado('grasa')">Brillante</button>
+<button onclick="resultado('mixta')">Grasa zona T</button>
+<button onclick="resultado('normal')">Equilibrada</button>
+
+<p id="respuesta"></p>
+
+</section>
+
+<div class="carrito">
+
+<h3>Carrito</h3>
+
+<ul id="lista"></ul>
 
 <p>Total: $<span id="total">0</span></p>
 
-<button onclick="comprar()">Comprar por WhatsApp</button>
+<button onclick="comprar()">Comprar</button>
 
 </div>
 
-</div>
+<footer>
+
+<p>Study Glow Up S.A.S</p>
+<p>Contacto: 3171130191</p>
+
+</footer>
 
 <script>
 
-let carrito=[];
-let total=0;
+let carrito=[]
+let total=0
 
 function agregar(nombre,precio){
 
-carrito.push({nombre,precio});
-total+=precio;
-actualizar();
+carrito.push(nombre)
+total+=precio
 
-}
+let lista=document.getElementById("lista")
+let item=document.createElement("li")
 
-function actualizar(){
+item.textContent=nombre
+lista.appendChild(item)
 
-let lista=document.getElementById("lista-carrito");
-lista.innerHTML="";
-
-carrito.forEach(p=>{
-
-let item=document.createElement("li");
-item.textContent=p.nombre+" - $"+p.precio;
-
-lista.appendChild(item);
-
-});
-
-document.getElementById("total").textContent=total;
+document.getElementById("total").textContent=total
+document.getElementById("contadorCarrito").textContent="🛒 "+carrito.length
 
 }
 
 function comprar(){
 
-let mensaje="Hola quiero comprar:%0A";
+let mensaje="Hola quiero comprar:%0A"
 
 carrito.forEach(p=>{
-mensaje+=p.nombre+" $"+p.precio+"%0A";
-});
+mensaje+=p+"%0A"
+})
 
-mensaje+="Total: $"+total;
+mensaje+="Total: "+total
 
-window.open("https://wa.me/573171130191?text="+mensaje);
+window.open("https://wa.me/573171130191?text="+mensaje)
+
+}
+
+function resultado(tipo){
+
+if(tipo=="seca"){
+document.getElementById("respuesta").innerHTML="Tu piel parece SECA. Te recomendamos productos de ROSAS."
+}
+
+if(tipo=="grasa"){
+document.getElementById("respuesta").innerHTML="Tu piel parece GRASA. Te recomendamos productos de CENTELLA."
+}
+
+if(tipo=="mixta"){
+document.getElementById("respuesta").innerHTML="Tu piel parece MIXTA. Usa productos hidratantes."
+}
+
+if(tipo=="normal"){
+document.getElementById("respuesta").innerHTML="Tu piel parece NORMAL. Puedes usar la mayoría de productos."
+}
+
+}
+
+function buscarProducto(){
+
+let input=document.getElementById("buscador").value.toLowerCase()
+let productos=document.querySelectorAll(".producto")
+
+productos.forEach(function(p){
+
+let nombre=p.innerText.toLowerCase()
+
+if(nombre.includes(input)){
+p.style.display="block"
+}else{
+p.style.display="none"
+}
+
+})
 
 }
 
