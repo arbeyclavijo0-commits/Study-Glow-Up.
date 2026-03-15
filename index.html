@@ -1,193 +1,216 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Study Glow Up S.A.S</title>
+<meta charset="UTF-8">
+<title>Study Glow Up</title>
 
 <style>
 
 body{
 margin:0;
 font-family:Arial;
-background:#fafafa;
-}
-
-/* MENU */
-
-.menu{
-background:#cc0066;
-padding:15px;
-text-align:center;
-}
-
-.menu a{
+background-image:url("xd.jpg");
+background-size:cover;
+background-attachment:fixed;
 color:white;
-margin:20px;
+}
+
+/* barra superior */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:rgba(0,0,0,0.8);
+}
+
+nav ul{
+display:flex;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav ul li a{
+color:white;
 text-decoration:none;
-font-weight:bold;
 font-size:18px;
 }
 
-/* INICIO */
-
-.inicio{
-background-image:url('xd.jpg');
-background-size:cover;
-background-position:center;
-text-align:center;
-color:white;
-padding:120px 20px;
-text-shadow:2px 2px 6px black;
+nav ul li a:hover{
+color:#ffd700;
 }
 
 .logo{
-width:180px;
+width:60px;
 }
 
-.titulo{
-font-size:50px;
-font-weight:bold;
+/* portada */
+
+.portada{
+text-align:center;
+padding:120px 20px;
 }
 
-.eslogan{
-font-size:22px;
+.portada h1{
+font-size:60px;
+margin-bottom:10px;
 }
 
-/* SECCIONES */
+.portada p{
+font-size:20px;
+}
+
+/* secciones */
 
 .seccion{
-display:flex;
-align-items:center;
-justify-content:center;
-padding:80px 10%;
-gap:60px;
-flex-wrap:wrap;
+padding:80px 15%;
+background:rgba(0,0,0,0.6);
+margin-top:40px;
 }
 
-.texto{
-flex:1;
-min-width:300px;
-font-size:18px;
-line-height:1.6;
-}
-
-.imagen{
-flex:1;
-min-width:300px;
+.seccion h2{
 text-align:center;
+font-size:40px;
+margin-bottom:30px;
 }
 
-.imagen img{
-width:80%;
+/* productos */
+
+.productos{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+}
+
+.producto{
+width:250px;
+text-align:center;
+opacity:0;
+transform:translateY(30px);
+animation:aparecer 1s forwards;
+}
+
+.producto img{
+width:100%;
 border-radius:10px;
 }
 
-h2{
-color:#cc0066;
-font-size:32px;
+.producto h3{
+margin-top:10px;
 }
 
-.catalogo{
-text-align:center;
-padding:80px 10%;
+@keyframes aparecer{
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.boton{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#ffd700;
+color:black;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+.boton:hover{
+background:white;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<!-- MENU -->
+<!-- barra -->
 
-<div class="menu">
-<a href="#inicio">Inicio</a>
-<a href="#empresa">Empresa</a>
-<a href="#catalogo">Catálogo</a>
-</div>
-
-<!-- INICIO -->
-
-<div class="inicio" id="inicio">
+<nav>
 
 <img src="logo.jpeg" class="logo">
 
-<div class="titulo">Study Glow Up S.A.S</div>
+<ul>
+<li><a href="#">Inicio</a></li>
+<li><a href="catalogo.pdf" target="_blank">Catálogo</a></li>
+<li><a href="#nosotros">Nosotros</a></li>
+<li><a href="#productos">Productos</a></li>
+</ul>
 
-<p class="eslogan">La belleza comienza desde el interior</p>
+</nav>
+
+<!-- portada -->
+
+<div class="portada">
+
+<h1>Study Glow Up</h1>
+
+<p>La belleza comienza desde el interior</p>
+
+<a href="catalogo.pdf" target="_blank" class="boton">Ver Catálogo</a>
 
 </div>
 
-<!-- EMPRESA -->
+<!-- sobre nosotros -->
 
-<div class="seccion" id="empresa">
+<div class="seccion" id="nosotros">
 
-<div class="texto">
-
-<h2>¿Quiénes Somos?</h2>
+<h2>Sobre Nosotros</h2>
 
 <p>
-Study Glow Up es una empresa autorretenedora dedicada a la comercialización al por mayor de productos para el cuidado de la piel. Nuestro código CIIU 4669 nos identifica dentro de las actividades de comercio al por mayor de productos estéticos.
+Study Glow Up S.A.S es una empresa dedicada a la comercialización de productos para el cuidado de la piel.
+Nuestro objetivo es ayudar a las personas a mejorar su autoestima y confianza a través de productos de calidad
+para el cuidado facial.
 </p>
 
 <p>
-Ofrecemos una amplia variedad de artículos estéticos, masajeadores faciales y cosméticos de calidad. Creemos que cada persona merece sentirse bien consigo misma.
+Nuestra misión es mejorar la autoestima del 80% de las personas en Colombia que sufren de acné, ofreciendo
+productos efectivos y asesoría estética para ayudarles a alcanzar su mejor versión.
 </p>
 
-</div>
-
-<div class="imagen">
-<img src="logo.jpeg">
-</div>
-
-</div>
-
-<!-- MISION -->
-
-<div class="seccion">
-
-<div class="imagen">
-<img src="logo.jpeg">
-</div>
-
-<div class="texto">
-
-<h2>Misión</h2>
-
 <p>
-La misión de Study Glow Up S.A.S es mejorar la autoestima del 80% de las personas en Colombia que sufren de acné, ofreciendo productos y asesoría estética que ayuden a mejorar su seguridad personal.
+A futuro aspiramos ser reconocidos a nivel nacional no solo por nuestros productos, sino también por la
+ayuda que brindamos a las personas que desean mejorar su piel y su seguridad personal.
 </p>
 
 </div>
 
+<!-- productos -->
+
+<div class="seccion" id="productos">
+
+<h2>Nuestros Productos</h2>
+
+<div class="productos">
+
+<div class="producto">
+<img src="producto1.jpg">
+<h3>Kit Anti Acné</h3>
+<p>Ayuda a reducir el acné y mejorar la salud de la piel.</p>
 </div>
 
-<!-- VISION -->
-
-<div class="seccion">
-
-<div class="texto">
-
-<h2>Visión</h2>
-
-<p>
-A futuro aspiramos ser reconocidos nacionalmente no solo por nuestros productos sino también por nuestra ayuda y asesoría a las personas que sufren de acné para ayudarlos a llegar a su mejor versión.
-</p>
-
+<div class="producto">
+<img src="producto2.jpg">
+<h3>Masajeador Facial</h3>
+<p>Estimula la circulación y mejora la apariencia del rostro.</p>
 </div>
 
-<div class="imagen">
-<img src="logo.jpeg">
+<div class="producto">
+<img src="producto3.jpg">
+<h3>Serum Facial</h3>
+<p>Hidrata profundamente y mejora la textura de la piel.</p>
 </div>
 
 </div>
-
-<!-- CATALOGO -->
-
-<div class="catalogo" id="catalogo">
-
-<h2>Catálogo de Productos</h2>
-
-<iframe src="catalogo.pdf" width="90%" height="600px"></iframe>
 
 </div>
 
