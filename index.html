@@ -1,4 +1,4 @@
-```html
+```html id="finalGlowUp"
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -13,93 +13,84 @@
 body{
 margin:0;
 font-family:Arial;
+/* Cambia el nombre según tu archivo de fondo */
 background:url("xd.jpg");
 background-size:cover;
 background-attachment:fixed;
 }
 
 header{
-background:#ff8fb1;
-color:white;
+background:#F8F8F8; /* blanco perlado */
+color:#FF5C8D; /* texto rosado */
 padding:20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-flex-wrap:wrap;
 }
 
 header img{
-height:70px;
+height:60px;
 }
 
 nav a{
-color:white;
+color:#FF5C8D;
 text-decoration:none;
-margin:15px;
+margin:10px;
 font-weight:bold;
 }
 
 #contadorCarrito{
-background:white;
-color:#ff8fb1;
-padding:8px 15px;
+background:#FF5C8D;
+color:white;
+padding:5px 12px;
 border-radius:20px;
 font-weight:bold;
 }
 
 .hero{
 text-align:center;
-padding:100px 20px;
+padding:80px 20px;
 color:white;
 background:rgba(0,0,0,0.4);
 }
 
-.hero h1{
-font-size:50px;
-}
-
-section{
-padding:60px 20px;
-}
-
 .productos{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
+padding:40px;
 }
 
 .producto{
 background:white;
 padding:20px;
 border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
+box-shadow:0 5px 10px rgba(0,0,0,0.2);
 text-align:center;
-transition:0.3s;
 }
 
-.producto:hover{
-transform:scale(1.05);
+.producto img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:10px;
 }
 
 button{
-background:#ff8fb1;
-border:none;
-padding:10px 20px;
-color:white;
+background:#F8F8F8; /* blanco perlado */
+border:2px solid #FF5C8D;
+padding:10px 15px;
+color:#FF5C8D;
 border-radius:20px;
 cursor:pointer;
+font-weight:bold;
 }
 
 button:hover{
-background:#ff6c9a;
-}
-
-input{
-padding:10px;
-width:250px;
-border-radius:20px;
-border:1px solid #ccc;
-margin-bottom:20px;
+background:#FFABC1; /* rosa suave al pasar el mouse */
+border-color:#FF5C8D;
+color:white;
 }
 
 .carrito{
@@ -108,21 +99,19 @@ right:20px;
 top:120px;
 background:white;
 padding:20px;
-width:250px;
+width:220px;
 box-shadow:0 0 10px rgba(0,0,0,0.3);
 border-radius:10px;
 }
 
-.piel{
-text-align:center;
-background:#ffe4ec;
-}
-
-footer{
-background:#ff8fb1;
+.eliminar{
+background:red;
+margin-left:5px;
+padding:3px 8px;
 color:white;
-text-align:center;
-padding:20px;
+border:none;
+border-radius:5px;
+cursor:pointer;
 }
 
 </style>
@@ -132,15 +121,11 @@ padding:20px;
 
 <header>
 
-<img src="logo.jpeg">
+<img src="logo.png">
 
 <nav>
-
-<a href="#destacados">Destacados</a>
 <a href="#productos">Productos</a>
 <a href="catalogo.pdf" target="_blank">Catálogo</a>
-<a href="#piel">Tipo de piel</a>
-
 </nav>
 
 <div id="contadorCarrito">🛒 0</div>
@@ -153,110 +138,76 @@ padding:20px;
 
 <p>La belleza comienza desde el interior</p>
 
-<p>Ayudamos a mejorar la autoestima de personas con acné</p>
-
-</section>
-
-<section id="destacados">
-
-<h2>Productos Destacados</h2>
-
-<div class="productos">
-
-<div class="producto">
-<h3>Kit Welcome Rosas</h3>
-<p>$29.990</p>
-<button onclick="agregar('Kit Welcome Rosas',29990)">Agregar</button>
-</div>
-
-<div class="producto">
-<h3>Premium Rosas</h3>
-<p>$50.000</p>
-<button onclick="agregar('Premium Rosas',50000)">Agregar</button>
-</div>
-
-</div>
-
 </section>
 
 <section id="productos">
 
-<h2>Nuestros Kits</h2>
-
-<input type="text" id="buscador" placeholder="Buscar producto..." onkeyup="buscarProducto()">
-
 <div class="productos">
 
 <div class="producto">
+<img src="2025.png">
 <h3>Kit Welcome Rosas</h3>
 <p>$29.990</p>
 <button onclick="agregar('Kit Welcome Rosas',29990)">Agregar</button>
 </div>
 
 <div class="producto">
+<img src="2025.1.png">
 <h3>Kit Welcome Centella</h3>
 <p>$29.990</p>
 <button onclick="agregar('Kit Welcome Centella',29990)">Agregar</button>
 </div>
 
 <div class="producto">
+<img src="2025.2.png">
 <h3>Kit Welcome Vitamina C</h3>
 <p>$29.990</p>
 <button onclick="agregar('Kit Welcome Vitamina C',29990)">Agregar</button>
 </div>
 
 <div class="producto">
+<img src="2025.3.png">
 <h3>Premium Rosas</h3>
 <p>$50.000</p>
 <button onclick="agregar('Premium Rosas',50000)">Agregar</button>
 </div>
 
 <div class="producto">
+<img src="2025.4.png">
 <h3>Premium Centella</h3>
 <p>$50.000</p>
 <button onclick="agregar('Premium Centella',50000)">Agregar</button>
 </div>
 
 <div class="producto">
+<img src="2025.5.png">
 <h3>Kit Parejas Rosas</h3>
 <p>$40.000</p>
 <button onclick="agregar('Kit Parejas Rosas',40000)">Agregar</button>
 </div>
 
 <div class="producto">
+<img src="2025.6.png">
 <h3>Kit Pestañas Negro</h3>
 <p>$30.000</p>
 <button onclick="agregar('Kit Pestañas Negro',30000)">Agregar</button>
 </div>
 
 <div class="producto">
+<img src="2025.7.png">
 <h3>Kit Pestañas Transparente</h3>
 <p>$30.000</p>
 <button onclick="agregar('Kit Pestañas Transparente',30000)">Agregar</button>
 </div>
 
 <div class="producto">
+<img src="2025.8.png">
 <h3>Kit Piel Grasa Centella</h3>
 <p>$30.000</p>
 <button onclick="agregar('Kit Piel Grasa Centella',30000)">Agregar</button>
 </div>
 
 </div>
-
-</section>
-
-<section id="piel" class="piel">
-
-<h2>Identifica tu tipo de piel</h2>
-
-<p>¿Cómo se siente tu piel después de lavarla?</p>
-
-<button onclick="resultado('seca')">Tirante</button>
-<button onclick="resultado('grasa')">Brillante</button>
-<button onclick="resultado('mixta')">Grasa zona T</button>
-<button onclick="resultado('normal')">Equilibrada</button>
-
-<p id="respuesta"></p>
 
 </section>
 
@@ -272,31 +223,49 @@ padding:20px;
 
 </div>
 
-<footer>
-
-<p>Study Glow Up S.A.S</p>
-<p>Contacto: 3171130191</p>
-
-</footer>
-
 <script>
 
 let carrito=[]
-let total=0
 
 function agregar(nombre,precio){
 
-carrito.push(nombre)
-total+=precio
+carrito.push({nombre,precio})
+
+actualizarCarrito()
+
+}
+
+function actualizarCarrito(){
 
 let lista=document.getElementById("lista")
+
+lista.innerHTML=""
+
+let total=0
+
+carrito.forEach((producto,index)=>{
+
 let item=document.createElement("li")
 
-item.textContent=nombre
+item.innerHTML=producto.nombre+" - $"+producto.precio+
+" <button class='eliminar' onclick='eliminar("+index+")'>❌</button>"
+
 lista.appendChild(item)
+
+total+=producto.precio
+
+})
 
 document.getElementById("total").textContent=total
 document.getElementById("contadorCarrito").textContent="🛒 "+carrito.length
+
+}
+
+function eliminar(index){
+
+carrito.splice(index,1)
+
+actualizarCarrito()
 
 }
 
@@ -304,52 +273,16 @@ function comprar(){
 
 let mensaje="Hola quiero comprar:%0A"
 
+let total=0
+
 carrito.forEach(p=>{
-mensaje+=p+"%0A"
+mensaje+=p.nombre+"%0A"
+total+=p.precio
 })
 
 mensaje+="Total: "+total
 
 window.open("https://wa.me/573171130191?text="+mensaje)
-
-}
-
-function resultado(tipo){
-
-if(tipo=="seca"){
-document.getElementById("respuesta").innerHTML="Tu piel parece SECA. Te recomendamos productos de ROSAS."
-}
-
-if(tipo=="grasa"){
-document.getElementById("respuesta").innerHTML="Tu piel parece GRASA. Te recomendamos productos de CENTELLA."
-}
-
-if(tipo=="mixta"){
-document.getElementById("respuesta").innerHTML="Tu piel parece MIXTA. Usa productos hidratantes."
-}
-
-if(tipo=="normal"){
-document.getElementById("respuesta").innerHTML="Tu piel parece NORMAL. Puedes usar la mayoría de productos."
-}
-
-}
-
-function buscarProducto(){
-
-let input=document.getElementById("buscador").value.toLowerCase()
-let productos=document.querySelectorAll(".producto")
-
-productos.forEach(function(p){
-
-let nombre=p.innerText.toLowerCase()
-
-if(nombre.includes(input)){
-p.style.display="block"
-}else{
-p.style.display="none"
-}
-
-})
 
 }
 
